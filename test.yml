@@ -1,0 +1,10 @@
+---
+- name: Test network.base
+  hosts: all
+
+  tasks:
+    - name: Test capability detection
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        action: list
