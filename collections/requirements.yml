@@ -1,5 +1,7 @@
 ---
 collections:
+  - name: ansible.netcommon
+    version: 4.1.0
   - name: https://github.com/redhat-cop/network.base.git
     type: git
     version: main

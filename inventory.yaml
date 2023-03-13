@@ -1,0 +1,31 @@
+---
+all:
+  children:
+    ios:
+      vars:
+        ansible_network_os: cisco.ios.ios
+        ansible_connection: ansible.netcommon.network_cli
+      hosts:
+        ios1:
+          ansible_host: 10.10.10.10
+        ios2:
+          ansible_host: 10.10.10.11
+    eos:
+      vars:
+        ansible_network_os: arista.eos.eos
+        ansible_connection: ansible.netcommon.network_cli
+        ansible_become: true
+      hosts:
+        eos1:
+          ansible_host: 10.10.10.12
+        eos2:
+          ansible_host: 10.10.10.13
+    junos:
+      vars:
+        ansible_network_os: junipernetworks.junos.junos
+        ansible_connection: ansible.netcommon.netconf
+      hosts:
+        junos1:
+          ansible_host: 10.10.10.14
+        junos2:
+          ansible_host: 10.10.10.15
